@@ -1,0 +1,2 @@
+PyGObject # GObject stuff
+PyGObject-stubs # typings
