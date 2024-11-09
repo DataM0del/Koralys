@@ -2,6 +2,16 @@
 Useful utility functions, and constants (e.g. the operation table, getting opcodes, other stuff) for Luau.
 """
 
+LBC_CONSTANT_NIL = 0
+LBC_CONSTANT_BOOLEAN = 1
+LBC_CONSTANT_NUMBER = 2
+LBC_CONSTANT_STRING = 3
+LBC_CONSTANT_IMPORT = 4
+LBC_CONSTANT_TABLE = 5
+LBC_CONSTANT_CLOSURE = 6
+LBC_CONSTANT_VECTOR = 7
+
+
 class BytecodeOp:
     name: str
     type: str

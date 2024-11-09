@@ -46,6 +46,10 @@ from luau import (
     get_arg_sBx,
     get_arg_sAx,
     get_op_table,
+    LBC_CONSTANT_NIL,
+    LBC_CONSTANT_BOOLEAN, LBC_CONSTANT_NUMBER,
+    LBC_CONSTANT_STRING, LBC_CONSTANT_IMPORT,
+    LBC_CONSTANT_TABLE, LBC_CONSTANT_CLOSURE, LBC_CONSTANT_VECTOR
 )
 
 DEBUG = False  #! Will slow down the decompilation process significantly
@@ -53,18 +57,6 @@ DEBUG = False  #! Will slow down the decompilation process significantly
 
 def debug(*args, **kwargs):
     return print(*args, **kwargs) if DEBUG else None
-
-
-# < CONSTANT TYPES > #
-# https://github.com/luau-lang/luau/blob/db809395bf5739c895a24dc73960b9e9ab6468c5/Compiler/include/Luau/BytecodeBuilder.h#L151-L161
-LBC_CONSTANT_NIL = 0
-LBC_CONSTANT_BOOLEAN = 1
-LBC_CONSTANT_NUMBER = 2
-LBC_CONSTANT_STRING = 3
-LBC_CONSTANT_IMPORT = 4
-LBC_CONSTANT_TABLE = 5
-LBC_CONSTANT_CLOSURE = 6
-LBC_CONSTANT_VECTOR = 7
 
 
 def deserialize_v5(
