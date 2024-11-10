@@ -1,0 +1,5 @@
+# Koralys only uses the Python standard library.
+# requests is used to download the Luau compiler.
+# This is only used for the compiler script.
+# pinning the version isn't necessary, but it's safer.
+requests == 2.32.3
